@@ -7,6 +7,7 @@ import Login from '../containers/login';
 import SignUp from '../containers/signup';
 import Dashboard from '../containers/dashboard';
 import CreateStory from '../containers/dashboard/create';
+import Story from '../containers/dashboard/story';
 
 const history: History = createBrowserHistory();
 
@@ -35,7 +36,7 @@ const RoutesContainer: React.FC = () => {
           </Route>
           <Route exact path="/dashboard/story/:storyId">
             <Nav />
-            {/* <Story /> */}
+            <Story />
           </Route>
         </PrivateRoute>
       </Switch>
