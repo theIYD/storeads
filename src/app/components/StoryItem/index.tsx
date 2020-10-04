@@ -18,7 +18,7 @@ const StoryItem: React.FC<Story> = ({ title, createdOn, id }) => {
       boxShadow="lg"
       rounded="md"
       width="100%"
-      background="gray.500"
+      background="gray"
       p={8}
     >
       <Flex flexDirection="column">
