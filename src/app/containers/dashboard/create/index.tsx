@@ -11,10 +11,13 @@ import { ArrowBackIcon, CheckIcon } from '@chakra-ui/icons';
 import axios from '../../../axios';
 import { default as to } from 'await-to-js';
 
+import { useHistory } from 'react-router-dom';
+
 const CreateStory: React.FC = () => {
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
   const toast = useToast();
+  const history = useHistory();
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.keyCode === 13) {
@@ -63,7 +66,7 @@ const CreateStory: React.FC = () => {
               aria-label="Go back"
               icon={<ArrowBackIcon />}
               onClick={() => {
-                window.location.pathname = '/dashboard';
+                history.goBack();
               }}
             />
             <Button

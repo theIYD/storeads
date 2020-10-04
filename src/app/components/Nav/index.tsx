@@ -13,20 +13,14 @@ const Nav: React.FC = () => {
       px={6}
     >
       <Link to="/dashboard">
-        <Text fontWeight="bold">Read Count</Text>
+        <Text fontWeight="bold">Storeads</Text>
       </Link>
       <Flex alignItems="center">
-        <Button
-          colorScheme="purple"
-          variant="solid"
-          size="sm"
-          mr={4}
-          onClick={() => {
-            window.location.pathname = '/dashboard/create';
-          }}
-        >
-          <Text fontSize={['xs', 'xs', 'md']}>Create Story</Text>
-        </Button>
+        <Link to="/dashboard/create">
+          <Button colorScheme="purple" variant="solid" size="sm" mr={4}>
+            <Text fontSize={['xs', 'xs', 'md']}>Create Story</Text>
+          </Button>
+        </Link>
         <Button
           size="sm"
           variant="outline"
