@@ -28,7 +28,7 @@ const Dashboard: React.FC = () => {
           <Spinner />
         </Flex>
       ) : (
-        <Stack spacing={4}>
+        <Stack w="50%" margin="2rem auto" spacing={4}>
           {stories.length === 0 ? (
             <Text
               fontSize="sm"
